@@ -24,5 +24,5 @@ public class Employee {
     @JoinTable(name = "job_employee",
             joinColumns = @JoinColumn(name = "employee_id"),
             inverseJoinColumns = @JoinColumn(name = "job_id"))
-    private Set<Job> jobs = new HashSet<>();
+    private Set<Job> postulaJobs = new HashSet<>();
  }

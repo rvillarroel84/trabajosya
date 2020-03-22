@@ -23,9 +23,22 @@ public class Job {
     private Double salario;
 
     @Enumerated(EnumType.STRING)
+
+    private Tiempo jornada;
+
+    @Lob
+    private String habilidades;
+
+    @Lob
+    private String experiencia;
+
+    private String locacion;
+
+    @Enumerated(EnumType.STRING)
     private EmployeeStatus estado;
 
-    @ManyToMany(mappedBy = "jobs")
-    private Set<Employee> employees = new HashSet<>();
+
+    @ManyToMany(mappedBy = "postulaJobs")
+    private Set<Employee> employeesPosting = new HashSet<>();
 
 }
