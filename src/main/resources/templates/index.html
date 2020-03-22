@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+    <td>Nombre</td>
+    <td>Salario</td>
+<!--    <td>Jobs</td>-->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="job: ${jobs}">
+        <td th:text="${job.nombre}"></td>
+        <td th:text="${job.salario}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
